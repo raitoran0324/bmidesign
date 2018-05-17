@@ -5,16 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:slider"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="500" Width="300">
     <Grid>
-        <StackPanel Margin="20" Width="400">
+        <StackPanel Margin="20 10 20 450" Height="30" Orientation="Horizontal">
+            <RadioButton FontSize="10">女</RadioButton>
+            <RadioButton FontSize="10" Margin="10">男</RadioButton>
+        </StackPanel>
+        
+        <StackPanel Margin="20 60" Width="400">
             <!--Height-->
             <Canvas Width="400" Height="50" Background="LightSkyBlue">
+                <TextBlock VerticalAlignment="Center">Height</TextBlock>
                 <Border CornerRadius="10" Background="LightGray" Canvas.Top="0" Canvas.Left="0" x:Name="Height">
                     <TextBlock  Width="80" x:Name="HeightNumber" TextAlignment="Center" Padding="0 3">0</TextBlock>
                 </Border>
             </Canvas>
             <Slider Minimum="0" Maximum="200" x:Name="HeightSlider" ValueChanged="HeightSlider_ValueChanged"></Slider>
+            
             <!--Weight-->
             <Canvas Width="400" Height="50" Background="LightSkyBlue">
                 <Border CornerRadius="10" Background="LightGray" Canvas.Top="0" Canvas.Left="0" x:Name="Weight">
@@ -22,6 +29,7 @@
                 </Border>
             </Canvas>
             <Slider Minimum="0" Maximum="200" x:Name="WeightSlider" ValueChanged="WeightSlider_ValueChanged"></Slider>
+            
             <!--BMI-->
         <StackPanel Orientation="Horizontal">
             <TextBlock FontSize="40" x:Name="BmiNumber1">29</TextBlock>
